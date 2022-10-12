@@ -77,7 +77,7 @@ export default defineComponent({
       fetchUserMyProfile()
       checkAnnouncements()
       // initNotificationsListener()
-      // TODO:
+      // TODO:  
       // Needs handling when endpoint errors
     })
 
