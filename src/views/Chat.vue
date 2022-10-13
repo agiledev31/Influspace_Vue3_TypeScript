@@ -48,7 +48,10 @@ export default defineComponent({
       return ''
     })
 
-    return { chatStyles, chatClasses }
+    return { 
+      chatStyles, 
+      chatClasses 
+    }
   },
 })
 </script>
