@@ -1,19 +1,14 @@
 <template>
   <main class="invitations">
     <h2 class="title">All invitations</h2>
-
     <div class="wrapper">
       <AppSkeleton v-if="isLoading" />
-
       <AppErrorBox v-else-if="isError" @clicked="refetchInvitations"> invitations </AppErrorBox>
-
       <AppEmptyBox v-else-if="isLoaded && !invitations?.length"> There are no invitations at the moment </AppEmptyBox>
-
       <ul v-else class="list">
         <InvitationItem v-for="invitation in invitations" :key="invitation.id" :invitation="invitation" />
       </ul>
     </div>
-
     <AppPagination
       :active-page="activePage"
       :count="invitationsCount"
@@ -57,7 +52,6 @@ export default defineComponent({
     } = useInfluencerInvitations()
 
     refetchInvitations()
-
     watchPageLimits()
     watchFilters()
 
