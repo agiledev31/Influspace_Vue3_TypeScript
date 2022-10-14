@@ -45,6 +45,7 @@ export default defineComponent({
     ProposalProjectInfo,
     AppRequestErrorPopup,
   },
+  
   setup() {
     const {
       task,
