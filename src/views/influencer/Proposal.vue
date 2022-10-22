@@ -4,7 +4,6 @@
       <h1 class="title">Proposal</h1>
       <div class="wrapper">
         <AppSkeleton v-if="isLoading" />
-
         <AppErrorBox v-else-if="isError" @clicked="initInfluencerProposal">proposal</AppErrorBox>
         <template v-else>
           <ProposalInfo :proposal="getInfluencerProposal" :task-id="getProposalTask?.id || ''" />
@@ -50,6 +49,7 @@ export default defineComponent({
     AppSkeleton,
     AppExpandMenu,
   },
+  
   setup() {
     const { isLoading, isError, isLoaded, getInfluencerProposal, getProposalTask, initInfluencerProposal, resetState } =
       useInfluencerProposal()
