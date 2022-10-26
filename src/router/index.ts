@@ -20,6 +20,7 @@ import { chatRoutes } from '@/components/chat/chat-routes'
 import { insightsRoute } from '@/components/insights/insights.routes'
 import { setTitle, scrollToPageTop } from '@/components/helpers/dom'
 
+// define routes
 const routes: Array<RouteRecordRaw> = [
   ...homepageRoutes,
   ...loginRoutes,
